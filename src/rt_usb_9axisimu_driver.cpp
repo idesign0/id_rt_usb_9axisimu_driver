@@ -288,7 +288,7 @@ RtUsb9axisimuRosDriver::ReadStatus RtUsb9axisimuRosDriver::readAsciiData(void)
   return RtUsb9axisimuRosDriver::ReadStatus::SUCCESS;
 }
 
-RtUsb9axisimuRosDriver::RtUsb9axisimuRosDriver(std::string port = "")
+RtUsb9axisimuRosDriver::RtUsb9axisimuRosDriver(std::string port)
 {
   serial_port_ = std::make_unique<rt_usb_9axisimu::SerialPort>(port.c_str());
   data_format_ = DataFormat::NONE;
